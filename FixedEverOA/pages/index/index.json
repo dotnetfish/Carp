@@ -1,0 +1,17 @@
+{
+    "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "安全检查"
+    }, {
+      "pagePath": "pages/quality/index",
+      "text": "质量管理"
+    }, {
+      "pagePath": "pages/monitor/index",
+      "text": "现场监控"
+    }, {
+      "pagePath": "pages/user/index",
+      "text": "个人中心"
+    }]
+  }
+}

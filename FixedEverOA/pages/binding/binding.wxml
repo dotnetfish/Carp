@@ -1,0 +1,33 @@
+<!--binding.wxml-->
+<view class="container">
+  <view   class="userinfo">
+    <image class="userinfo-avatar" src="{{wxUserInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{wxUserInfo.nickName}}</text>
+  </view>
+  <view>
+ 
+  <view class="usermotto" hidden="{{bindAccount}}">
+   <text>请输入EverOA帐号</text>
+  <form bindsubmit="bindAccount" >
+  <view style="margin:5px;" >
+  <input placeholder="帐号" type="text" value="{{userInfo.account}}" style="border:1px solid #ccc;" />
+   </view>
+   <view style="margin:5px;">
+   <input placeholder="密码" type="text" password style="border:1px solid #ccc;" />
+   </view>
+    <view style="margin:5px;">
+ <button type="default" formType="submit"   > bind</button>
+   
+   </view>
+     <view style="margin:5px;">
+    <button type="primary" bindtapp="newAccount" > Create new Account</button>
+    </view>
+   </form>
+  </view>
+  <view hidden="{{!bindAccount}}">
+  <button type="primary" bindtap="redirectTo" > Go into App</button>
+  </view>
+  <toast icon="{{toast.icon}}" hidden="{{toast.hidden}}" bindchange="toastChange" >
+  {{toast.message}}
+  </toast>
+</view>

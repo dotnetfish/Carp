@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/binding/binding"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "EverOA",
+    "navigationBarTextStyle":"black"
+  },
+  "debug":true
+}

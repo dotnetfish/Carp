@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+<view >
+<text>test</text>
+</view>
+
+ <!-- <form bindsubmit="bindAccount" >
+  <view   class="userinfo">
+    <image class="userinfo-avatar" src="{{wxUserInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{wxUserInfo.nickName}}</text>
+  </view>
+
+ <view>
+ <text >请输入要绑定的帐号</text>
+ <input type="text"   value="{{userInfo.account}}" />
+ </view>
+
+<view class="btn-area">
+        <button formType="submit">Submit</button>
+        <button formType="reset">Reset</button>
+    </view>
+</form>-->
+</view>

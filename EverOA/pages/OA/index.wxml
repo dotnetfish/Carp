@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{wxInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{wxInfo.nickName}}</text>
+  </view>
+ <view class="usermotto">
+  <form bindsubmit="bindAccount" >
+
+
+ <view>
+ <text >请输入要绑定的帐号</text>
+
+ </view>
+<view>
+ <input type="text" name="account" placeholder="输入帐号"  value="{{userInfo.account}}" />
+</view>
+<view>
+ <input type="text" name="password" placeholder="输入帐号" password  value="{{userInfo.password}}" />
+</view>
+<view class="btn-area">
+        <button class="primary" formType="submit">Submit</button>
+        <button class="primary" formType="reset">Reset</button>
+
+    </view>
+    </form>
+  </view>
+   <toast hidden="{{showBindingError.hidden}}" duration="3000" bindchange="hidToast">
+      <text>{{showBindingError.message}}</text>
+    </toast>
+    <loading hidden="{{process.hidden}}">
+        {{process.message}}
+    </loading>
+    <modal title="{{modal.title}}" 
+    confirm-text="{{modal.confirm}}" 
+    cancel-text="{{modal.cancel}}" hidden="{{modal.hidden}}" 
+    bindconfirm="modalChange" 
+    bindcancel="modalChange">
+  {{modal.message}}
+</modal>
+</view>
