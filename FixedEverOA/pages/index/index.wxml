@@ -1,17 +1,32 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-   <view class="usermotto" >
-   <text>请输入EverOA帐号</text>
-   </view>
-    <view wx:for="grids" >
-      <navigator url="{{item.url}}">
-<image src="{{item.icon}}"/>
-<text>{{item.title}}</text>
-      </navigator>
-    </view>
+<view class="header" style="background:url('{{header.image}}')">
+
+ <view wx:for="{{header.grids}}" class="grid_item">
+ <navigator url="{{item.url}}">
+ <view >
+ <image src="{{item.icon}}"></image>
+ </view>
+ <view>
+ <text>{{item.text}}</text>
+ </view>
+ </navigator>
+ </view>
+   
+
+</view>
+
+<view class="body" >
+
+ <view wx:for="{{body.grids}}" class="grid_item">
+ <navigator url="{{item.url}}">
+ <view >
+ <image src="{{item.icon}}"></image>
+ </view>
+ <view>
+ <text>{{item.text}}</text>
+ </view>
+ </navigator>
+ </view>
+   
 
 </view>

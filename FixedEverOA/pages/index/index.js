@@ -7,15 +7,20 @@ Page( {
     motto: '正在获取帐号信息，请稍候....',
     userInfo: {},
     spAccount: {},
-    grids:[
-      {"url":"/pages/user/index","icon":"warn","title":"新建检查"},
-      {"url":"/pages/index/index","icon":"warn","title":"待确认检查"}
+    header:{image:"/resources/list@411.jpg",grids:[
+      {"url":"/pages/user/index","icon":"/resources/icons/calendar.png","text":"新建检查"},
+      {"url":"/pages/index/index","icon":"/resources/icons/check-list.png","text":"待确认检查"},
+       {"url":"/pages/user/index","icon":"/resources/icons/task.png","text":"新建检查"},
+      {"url":"/pages/index/index","icon":"/resources/icons/contacts.png","text":"待确认检查"}
     ]
-  },
-  grids:[
-      {url:"/pages/user/index",icon:"warn",title:"新建检查"},
-      {url:"/pages/index/index",icon:"warn",title:"待确认检查"}
-    ],
+  },body:{image:"/resources/list@411.jpg",grids:[
+      {"url":"/pages/user/index","icon":"/resources/icons/calendar.png","text":"新建检查"},
+      {"url":"/pages/index/index","icon":"/resources/icons/check-list.png","text":"待确认检查"},
+       {"url":"/pages/user/index","icon":"/resources/icons/task.png","text":"新建检查"},
+      {"url":"/pages/index/index","icon":"/resources/icons/contacts.png","text":"待确认检查"}
+    ]
+  }},
+ 
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo( {
@@ -38,7 +43,7 @@ Page( {
           })
         } else {
           console.log( 'on redirect to:' );
-          wx.redirectTo( { url: "../login/login" });
+       //   wx.redirectTo( { url: "../login/login" });
         }
 
 

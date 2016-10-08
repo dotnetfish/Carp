@@ -30,7 +30,7 @@ Page( {
           })
         } else {
           console.log( 'on redirect to:' );
-          wx.redirectTo( { url: "../binding/binding" });
+          wx.navigateTo( { url: "../binding/binding" });
         }
 
 

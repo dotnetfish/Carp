@@ -25,6 +25,8 @@ wx.request({
     //if(res.data.Success){
       //that.redirectTo({url:"../index/index.js"});
      that.setData({bindAccount:true});
+     app.globalData.userInfo={account:"admin",orgs:{name:"region",code:"region"}};
+     wx.navigateTo({url:"../index/index.js"});
    //}else{
      // that.toast("失败",res.data);
     //}
@@ -34,7 +36,8 @@ wx.request({
 })
   },
   redirectTo:function(){
-     wx.redirectTo({url:"../index/index.js"});
+    // wx.redirectTo({url:"/pages/index/index.js"});
+    wx.navigateBack();
   }
   ,
   toast:function(title,msg){
