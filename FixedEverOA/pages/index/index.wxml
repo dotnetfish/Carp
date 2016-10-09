@@ -17,7 +17,7 @@
 
 <view class="body" >
 
- <view wx:for="{{body.grids}}" class="grid_item">
+ <view wx:for="{{body.grids}}" class="grid_item {{index==0?'firstGrid':''}}">
  <navigator url="{{item.url}}">
  <view >
  <image src="{{item.icon}}"></image>
@@ -28,5 +28,14 @@
  </navigator>
  </view>
    
+<view  class="grid_item ">
+ <navigator url="/pages/index/function/more">
 
+ <view>
+ <text style="font-size:16px;margin-top:35px;">...</text>
+ </view>
+ </navigator>
+ </view>
 </view>
+
+

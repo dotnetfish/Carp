@@ -7,7 +7,7 @@ text-align: center;
 vertical-align: middle;
 }
 
-.grid_item{
+.header .grid_item{
   flex-direction: row;
  
   margin:35px 16px;
@@ -17,7 +17,7 @@ vertical-align: middle;
   vertical-align: middle;
 }
 
-.grid_item image{
+.header .grid_item image{
    width:50px;
   height:50px; 
   border-radius: 25px;
@@ -29,4 +29,34 @@ vertical-align: middle;
   text-align: center;
   align-items: center;
   font-size: 12px;
+}
+.body .grid_item{
+  flex-direction: row;
+ 
+ 
+  float:left;
+  color:#666;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+.body .grid_item image{
+   width:35px;
+  height:35px; 
+ 
+}
+
+.body .grid_item{
+  border:1px solid #e7e7e7;
+  border-left:none;
+  width:92px;
+  height: 80px;
+}
+
+.body .firstGrid{
+  border-left:1px solid #e7e7e7;
+}
+
+.body navigator{
+  margin-top:15px;
 }
